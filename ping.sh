@@ -1,0 +1,1 @@
+while true; do curl -s --max-time 5 -o /dev/null -w "$(date -Ins) %{http_code} %{time_connect} %{time_appconnect} %{time_starttransfer} %{time_total}\n" https://storage.mds.yandex.net/ping & sleep 1; done
